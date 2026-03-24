@@ -1,7 +1,10 @@
+page {
+  background-color: var(--td-bg-color-page);
+}
+
 .container {
   background-color: var(--td-bg-color-page);
   padding-bottom: env(safe-area-inset-bottom);
-  min-height: 100vh;
   box-sizing: border-box;
 }
 
@@ -43,13 +46,13 @@
   min-height: 50vh;
 }
 
-.t-grid {
+.result-grid .t-grid {
   background-color: var(--td-bg-color-page) !important;
 }
 
-.t-grid-item__content {
+.result-grid .t-grid-item__content {
   --td-grid-item-padding: 0rpx;
-  padding: 0rpx !important;
+  padding: 0 !important;
 }
 
 .result-item {
@@ -137,9 +140,9 @@
 }
 
 .filter-option.active {
-  background: var(--td-primary-color-6);
-  border-color: var(--td-primary-color-8);
-  color: var(--td-text-color-primary);
+  background: var(--td-brand-color);
+  border-color: var(--td-brand-color);
+  color: var(--td-text-color-anti);
   font-weight: 600;
 }
 
@@ -182,13 +185,20 @@
   align-items: center;
   padding-left: var(--td-cell-group-title-padding-left, 32rpx);
   padding-right: 32rpx;
-  height: 90rpx;
-  background-color: var(--td-cell-group-title-bg-color, var(--td-bg-color-secondarycontainer, #f3f3f3));
+  padding-top: 25rpx;
+  height: 40rpx;
+}
+
+.t-cell-group__title{
+  background-color: var(--td-bg-color-container, var(--td-bg-color-page,#ffffff)) !important;
+  padding-top: 25rpx;
+  line-height: 40rpx !important;
+    color: var(--td-text-color-secondary) !important;
 }
 
 .group-title {
   font-size: var(--td-cell-group-title-font-size, 28rpx);
-  color: var(--td-cell-group-title-color, var(--td-text-color-placeholder, rgba(0, 0, 0, 0.4)));
+  color: var(--td-text-color-secondary);
 }
 
 .expand-btn {

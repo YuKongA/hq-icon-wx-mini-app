@@ -5,6 +5,9 @@
     "include": []
   },
   "setting": {
+    "useCompilerPlugins": [
+      "typescript"
+    ],
     "urlCheck": false,
     "scopeDataCheck": false,
     "coverView": true,
@@ -40,12 +43,10 @@
     "condition": false,
     "swc": false,
     "disableSWC": true,
-    "disableUseStrict": false,
-    "useCompilerPlugins": false
+    "disableUseStrict": false
   },
   "compileType": "miniprogram",
   "libVersion": "3.13.1",
-  "appid": "wx3bcf7ea9efb7c34c",
   "projectname": "hq-icon",
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
