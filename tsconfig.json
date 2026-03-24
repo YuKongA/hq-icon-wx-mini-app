@@ -10,12 +10,10 @@
     "types": ["miniprogram-api-typings"]
   },
   "paths": {
-    "tdesign-miniprogram/*":["./miniprogram/miniprogram_npm/tdesign-miniprogram/*"]
+    "tdesign-miniprogram/*": [
+      "./miniprogram/miniprogram_npm/tdesign-miniprogram/*"
+    ]
   },
-  "include": [
-    "./**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["./**/*.ts"],
+  "exclude": ["node_modules"]
 }

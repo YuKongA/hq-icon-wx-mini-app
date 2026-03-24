@@ -1,6 +1,6 @@
-import {getTopApps, searchApp} from '../../utils/itunes';
-import {ActionSheet, Toast} from 'tdesign-miniprogram';
-import {ActionSheetTheme} from 'tdesign-miniprogram/action-sheet/index';
+import { getTopApps, searchApp } from '../../utils/itunes';
+import { ActionSheet, Toast } from 'tdesign-miniprogram';
+import { ActionSheetTheme } from 'tdesign-miniprogram/action-sheet/index';
 import {
     actionSheetItems,
     COUNTRY_MAPS,
@@ -63,7 +63,7 @@ Page({
 
         const platform = wx.getDeviceInfo().platform;
         const isMobile = platform === 'ios' || platform === 'android' || platform === 'ohos';
-        this.setData({isMobile});
+        this.setData({ isMobile });
 
         if (Object.keys(savedSettings).length > 0) {
             this.setData(savedSettings, () => {
@@ -137,7 +137,7 @@ Page({
 
     toggleCountryExpand() {
         const isExpanded = !this.data.isCountryExpanded;
-        const {collapsedHeight, expandedHeight} = this.data;
+        const { collapsedHeight, expandedHeight } = this.data;
 
         this.setData({
             isCountryExpanded: isExpanded, countryHeight: isExpanded ? expandedHeight : collapsedHeight
@@ -312,7 +312,7 @@ Page({
     },
 
     onItemClick(e) {
-        const {item} = e.currentTarget.dataset;
+        const { item } = e.currentTarget.dataset;
         this.setData({
             currentItem: item
         });
@@ -332,8 +332,8 @@ Page({
     },
 
     onActionSheetSelect(e) {
-        const {index} = e.detail;
-        const {currentItem} = this.data;
+        const { index } = e.detail;
+        const { currentItem } = this.data;
 
         if (!currentItem) return;
 
@@ -371,7 +371,7 @@ Page({
         });
 
         try {
-            const {filePath} = await this.prepareImageFile(item);
+            const { filePath } = await this.prepareImageFile(item);
             await this.saveToAlbum(filePath);
             wx.hideLoading();
             Toast({
@@ -398,16 +398,13 @@ Page({
             title: '处理中...', mask: true
         });
         try {
-            const {filePath, fileName} = await this.prepareImageFile(item);
+            const { filePath, fileName } = await this.prepareImageFile(item);
             await new Promise((resolve, reject) => {
                 wx.shareFileMessage({
                     filePath, fileName, success: resolve, fail: reject
                 });
             });
             wx.hideLoading();
-            Toast({
-                context: this, selector: '#t-toast', message: '已分享到聊天', theme: 'success'
-            });
         } catch (err) {
             console.error(err);
             wx.hideLoading();
@@ -429,7 +426,7 @@ Page({
             title: '处理中...', mask: true
         });
         try {
-            const {filePath, fileName} = await this.prepareImageFile(item);
+            const { filePath, fileName } = await this.prepareImageFile(item);
             await new Promise((resolve, reject) => {
                 wx.addFileToFavorites({
                     filePath, fileName, success: resolve, fail: reject

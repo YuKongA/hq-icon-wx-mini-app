@@ -1,9 +1,9 @@
 {
   "dependencies": {
-    "tdesign-miniprogram": "^1.12.1"
+    "tdesign-miniprogram": "^1.13.0"
   },
   "devDependencies": {
-    "miniprogram-api-typings": "^4.1.2",
-    "typescript": "^5.9.3"
+    "miniprogram-api-typings": "^5.1.2",
+    "typescript": "^6.0.2"
   }
 }
